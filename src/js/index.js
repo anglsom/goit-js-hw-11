@@ -4,6 +4,7 @@ import renderImage from './renderimage';
 import scrollStep from './scrollStep';
 import { lightbox } from './lightbox';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import Notiflix from 'notiflix';
 
 
 const searchForma = document.querySelector('.search-form');
@@ -73,5 +74,12 @@ async function clickLoad() {
   if (currentHits === response.totalHits) {
     loadButton.classList.add('is-hidden');
     textEnd.classList.remove('is-hidden');
+  }
+  
+  if (currentHits >= response.totalHits) {
+    loadButton.style.display = 'none';
+    Notiflix.Notify.info(
+      "We're sorry, but you've reached the end of search results."
+    );
   }
 }
