@@ -1,0 +1,47 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.photo-card {
+    width: calc(100% / 4 - 10px * 2);
+    margin: 10px;
+
+    color: black;
+    overflow: hidden;
+}
+
+.photo-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+    
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.end-collection-text {
+    margin: 15px 0 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: pink;
+
+    &.is-hidden {
+        display: none;
+    }
+}

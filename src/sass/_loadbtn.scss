@@ -1,0 +1,30 @@
+.load-more {
+    width: 200px;
+    height: 40px;
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 18px;
+    font-weight: 700;
+
+    border: 1px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    background-color: pink;
+    color: #000;
+
+    &:hover,
+    &:focus {
+        background-color: pink;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
